@@ -33,7 +33,6 @@ def run_query(query):
 # Home Page
 def Retail_order():
     st.title("Retail_order_data Bussiness-In-Site")
-    st.write("By Hariprasath S")
     queries = {
         
         "Top-Selling Products":"""
@@ -84,7 +83,6 @@ def Retail_order():
     # Display queries and their results
     for desc, query in queries.items():
         st.subheader(desc)  # Show the query description
-        st.code(query, language="sql")  # Show the query
         try:
             result_df = run_query(query)
             if result_df is not None:
@@ -172,7 +170,6 @@ def query_page():
     # Display queries and their results
     for desc, query in queries.items():
         st.subheader(desc)  # Show the query description
-        st.code(query, language="sql")  # Show the query
         try:
             result_df = run_query(query)
             if result_df is not None:
@@ -238,7 +235,6 @@ def My_Query():
     # Display queries and their results
     for desc, query in queries.items():
         st.subheader(desc)  # Show the query description
-        st.code(query, language="sql")  # Show the query
         try:
             result_df = run_query(query)
             if result_df is not None:
